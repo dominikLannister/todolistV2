@@ -4,7 +4,8 @@
     <div class="row">
       <Aside />
       <Main />
-    </div>  
+    </div>
+    <Footer />
   </div>
 </template>
 
@@ -13,13 +14,16 @@
 import Navbar from '@/components/Navbar.vue'
 import Aside from '@/components/Aside.vue'
 import Main from '@/components/Main.vue'
+import Footer from '@/components/Footer.vue'
+
 
 export default {
   name: 'home',
   components: {
     Navbar,
     Aside,
-    Main
+    Main,
+    Footer
   }
 }
 </script>
