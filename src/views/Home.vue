@@ -1,7 +1,10 @@
 <template>
   <div class="home">
     <Navbar msg="Welcome to Your Vue.js App"/>
-    <Aside />
+    <div class="row">
+      <Aside />
+      <Main />
+    </div>  
   </div>
 </template>
 
@@ -9,13 +12,14 @@
 // @ is an alias to /src
 import Navbar from '@/components/Navbar.vue'
 import Aside from '@/components/Aside.vue'
-
+import Main from '@/components/Main.vue'
 
 export default {
   name: 'home',
   components: {
     Navbar,
-    Aside
+    Aside,
+    Main
   }
 }
 </script>
