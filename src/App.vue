@@ -8,6 +8,8 @@
 </template>
 
 <style lang="scss">
+
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -15,7 +17,6 @@
   text-align: center;
   color: white;
   font-size: 17px;
-  background-color: #191d21; 
 }
 
 </style>
