@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div id="nav">
-      
+
     </div>
     <router-view/>
   </div>
@@ -13,8 +13,9 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: white;
   font-size: 17px;
+  background-color: #191d21; 
 }
 
 </style>

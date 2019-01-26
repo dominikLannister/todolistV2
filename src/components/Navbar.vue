@@ -7,9 +7,9 @@
     <div class="collapse navbar-collapse" id="mainmenu">
       <form class="form-inline my-2 my-lg-0 mr-auto ml-auto">
        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-       <button class="btn  my-2 my-sm-0" type="submit">Search</button>
+       <button class="btn btn-light  my-2 my-sm-0" type="submit">Search</button>
      </form>
-     <button type="button" class="btn btn-secondary mr-2"  v-on:click="showModal">Add</button>
+     <button type="button" class="btn btn-secondary mr-2"  >Add</button>
      <button type="button" class="btn btn-dark">Settings</button>
    </div>
   </nav>
@@ -17,7 +17,7 @@
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'Navbar',
   props: {
     msg: String
   }
@@ -26,5 +26,11 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+
+ nav
+ {
+  height: 57px;
+ }
+
 
 </style>
