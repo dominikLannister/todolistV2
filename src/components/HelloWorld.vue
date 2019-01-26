@@ -1,34 +1,18 @@
-<template>
-  <table class="table table-dark">
-    <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">First</th>
-        <th scope="col">Last</th>
-        <th scope="col">Handle</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td>Larry</td>
-        <td>the Bird</td>
-        <td>@twitter</td>
-      </tr>
-    </tbody>
-  </table>
+<template lang="html">
+  <nav class="navbar navbar-dark bg-jumpers navbar-expand-xl bg-primary">
+    <a class="navbar-brand " href="#">ToDoList.pl</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainmenu" aria-controls="mainmenu" aria-expanded="false"    aria-label="Przełącznik nawigacji">
+     <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainmenu">
+      <form class="form-inline my-2 my-lg-0 mr-auto ml-auto">
+       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+       <button class="btn  my-2 my-sm-0" type="submit">Search</button>
+     </form>
+     <button type="button" class="btn btn-secondary mr-2"  v-on:click="showModal">Add</button>
+     <button type="button" class="btn btn-dark">Settings</button>
+   </div>
+  </nav>
 </template>
 
 <script>
@@ -42,18 +26,5 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
+
 </style>
