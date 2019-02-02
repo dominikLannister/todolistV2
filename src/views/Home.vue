@@ -6,9 +6,7 @@
         <Aside />
         <Main />
       </div>
-      <div class="modalContainer">
-        <ModalForm />
-      </div>
+      <ModalForm />
     </div>
     <Footer />
   </div>
@@ -37,19 +35,6 @@ export default {
 </script>
 <style lang="scss">
 
- .main
- {
-  position: relative;
-  height: 100%;
- }
- .modalContainer
- {
-   position: absolute;
-   margin-left: auto;
-   margin-right: auto;
-   top: 50%;
-   width: 100%;
-   text-align: center;
- }
+
 
 </style>

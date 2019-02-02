@@ -2,7 +2,7 @@
   <aside class="col-3">
     <div class="timetable">
       <ul class="list-group">
-        <li class="list-group-item active">Today</li>
+        <li class="list-group-item headerList">Today</li>
         <li class="list-group-item">Week</li>
         <li class="list-group-item">Month</li>
         <li class="list-group-item">Year</li>
@@ -11,7 +11,7 @@
     <div class="calendar">
       <ul class="nav">
         <li class="nav-item">
-          <a class="nav-link active" href="#">Active</a>
+          <a class="nav-link" href="#">Active</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Link</a>
@@ -43,5 +43,10 @@ export default {
  .calendar
  {
   margin-top: 25px;
+ }
+ .headerList
+ {
+   background-color: #007bff !important;
+   color: white !important;
  }
 </style>

@@ -3,14 +3,14 @@
         <div class="modalContainer">
           <form class="form-inline">
             <div class="form-group mb-2">
-              <label for="staticEmail2" class="sr-only">Email</label>
-              <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="email@example.com">
+              <label for="staticEmail2" class="sr-only">Task</label>
+              <input type="text"  class="form-control" id="staticEmail2" placeholder="Task">
             </div>
             <div class="form-group mx-sm-3 mb-2">
-              <label for="inputPassword2" class="sr-only">Password</label>
-              <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
+              <label for="inputPassword2" class="sr-only">Description</label>
+              <input type="password" class="form-control" id="inputPassword2" placeholder="Description">
             </div>
-            <button type="submit" class="btn btn-primary mb-2">Confirm identity</button>
+            <button type="submit" class="btn btn-primary mb-2">Add Task</button>
           </form>
         </div>
         <span class="close">&times;</span>
@@ -30,22 +30,33 @@ export default {
   width: 100%;
   height: 100%;
   position: fixed;
-  display: none;
-  padding-top: 120px;
+  display: block;
+  z-index: 1;
   left: 0;
-  right: 0;
+  top: 0;
   overflow: auto;
   background-color: rgba(0,0,0,0.9);
 }
 .modalContainer
 {
-  margin: auto;
+
+  padding: 50px;
   display: block;
+  margin: auto;
+  margin-top: 100px;
   width: 70%;
   -webkit-animation-name: zoom;
   -webkit-animation-duration: 0.6s;
   animation-name: zoom;
   animation-duration: 0.6s;
+  background-color: white;
+  border-radius: 1px;
+}
+form
+{
+  width: 80%;
+  margin: auto;
+  padding: auto;
 }
 @-webkit-keyframes zoom
 {
