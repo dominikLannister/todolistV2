@@ -6,7 +6,8 @@
         <Aside />
         <Main />
       </div>
-      <ModalForm />
+      <ModalForm v-if="visible === true"/>
+      <Button  @click.native="modalOpen"/>
     </div>
     <Footer />
   </div>
@@ -19,8 +20,7 @@ import Aside from '@/components/Aside.vue'
 import Main from '@/components/Main.vue'
 import Footer from '@/components/Footer.vue'
 import ModalForm from '@/components/ModalForm.vue'
-
-
+import Button from '@/components/Button.vue'
 
 export default {
   name: 'home',
@@ -29,12 +29,25 @@ export default {
     Aside,
     Main,
     Footer,
-    ModalForm
+    ModalForm,
+    Button,
+  },
+
+data()
+{
+  return {
+    visible: false,
+  };
+},
+
+methods: {
+  modalOpen()
+  {
+    this.visible = true;
   }
+}
 }
 </script>
 <style lang="scss">
-
-
 
 </style>
