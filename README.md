@@ -1,5 +1,5 @@
 # todolistt
-
+application for people
 ## Project setup
 ```
 npm install
