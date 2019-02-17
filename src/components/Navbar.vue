@@ -9,7 +9,7 @@
        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
        <button class="btn btn-light  my-2 my-sm-0" type="submit">Search</button>
      </form>
-    
+
      <button type="button" class="btn btn-dark">Settings</button>
    </div>
   </nav>
@@ -19,19 +19,15 @@
 <script>
 export default {
   name: 'Navbar',
-  props:
-  {
+  props: {
     msg: String,
-    visible:
-    {
+    visible: {
       type: Boolean,
       default: true
     }
   },
-  methods:
-    {
-      showModal()
-    {
+  methods: {
+    showModal() {
       visible = true;
     }
   }
@@ -40,11 +36,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-
- nav
- {
-  height: 57px;
- }
-
-
+nav {
+    height: 57px;
+}
 </style>

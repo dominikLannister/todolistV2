@@ -1,16 +1,16 @@
 <template>
-  <div class="home">
-    <div class="main">
-      <Navbar msg="Welcome to Your Vue.js App"/>
-      <div class="row">
-        <Aside />
-        <Main />
-      </div>
-      <ModalForm v-if="visible === true"/>
-      <Button  @click.native="modalOpen"/>
+<div class="home">
+  <div class="main">
+    <Navbar msg="Welcome to Your Vue.js App" />
+    <div class="row">
+      <Aside />
+      <Main />
     </div>
-    <Footer />
+    <ModalForm v-if="visible === true" />
+    <Button @click.native="modalOpen" />
   </div>
+  <Footer />
+</div>
 </template>
 
 <script>
@@ -33,19 +33,17 @@ export default {
     Button,
   },
 
-data()
-{
-  return {
-    visible: false,
-  };
-},
+  data() {
+    return {
+      visible: false,
+    };
+  },
 
-methods: {
-  modalOpen()
-  {
-    this.visible = true;
+  methods: {
+    modalOpen() {
+      this.visible = true;
+    }
   }
-}
 }
 </script>
 <style lang="scss">
