@@ -7,13 +7,16 @@
       <Main />
     </div>
     <ModalForm v-if="visible === true" />
-    <Button @click.native="modalOpen" />
+    <Button @click.native="apiConncet" />
   </div>
   <Footer />
 </div>
 </template>
 
 <script>
+const API = 'http://localhost:81/apiTodolist/read.php';
+
+import axios from 'axios';
 // @ is an alias to /src
 import Navbar from '@/components/Navbar.vue'
 import Aside from '@/components/Aside.vue'
@@ -42,6 +45,19 @@ export default {
   methods: {
     modalOpen() {
       this.visible = true;
+    },
+    apiConncet() {
+      axios({
+          method: 'get',
+          url: 'http://localhost:81/apiTodolist/read.php',
+          responseType: 'json'
+        })
+        .then((response) => {
+          console.log(response);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
     }
   }
 }

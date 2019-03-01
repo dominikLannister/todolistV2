@@ -18,76 +18,77 @@
 </template>
 
 <script>
+
+
 export default {
-  name: 'ModalForm'
+  name: 'ModalForm',
 }
+
 </script>
 
 <style scoped lang="scss">
-
-.modalForm
-{
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  display: block;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  overflow: auto;
-  background-color: rgba(0,0,0,0.9);
+.modalForm {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: block;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9);
 }
-.modalContainer
-{
-  padding: 50px;
-  display: block;
-  margin: auto;
-  margin-top: 100px;
-  width: 70%;
-  -webkit-animation-name: zoom;
-  -webkit-animation-duration: 0.6s;
-  animation-name: zoom;
-  animation-duration: 0.6s;
-  background-color: white;
-  border-radius: 1px;
+.modalContainer {
+    padding: 50px;
+    display: block;
+    margin: 100px auto auto;
+    width: 70%;
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+    background-color: white;
+    border-radius: 1px;
 }
-form
-{
-  width: 80%;
-  margin: auto;
-  padding: auto;
+form {
+    width: 80%;
+    margin: auto;
+    padding: auto;
 }
-@-webkit-keyframes zoom
-{
-  from {-webkit-transform:scale(0)}
-  to {-webkit-transform:scale(1)}
+@-webkit-keyframes zoom {
+    from {
+        -webkit-transform: scale(0);
+    }
+    to {
+        -webkit-transform: scale(1);
+    }
 }
 @keyframes zoom {
-  from {transform:scale(0)}
-  to {transform:scale(1)}
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
 }
-.close
-{
-  position: absolute;
-  top: 15px;
-  right: 35px;
-  color: #f1f1f1;
-  font-size: 40px;
-  font-weight: bold;
-  transition: 0.3s;
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
 }
-.close:hover,
-.close:focus
-{
-  color: #bbb;
-  text-decoration: none;
-  cursor: pointer;
+.close:focus,
+.close:hover {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
 }
-@media only screen and (max-width: 700px)
-{
-.modal-content
-{
-  width: 100%;
-}
+@media only screen and (max-width: 700px) {
+    .modal-content {
+        width: 100%;
+    }
 }
 </style>
