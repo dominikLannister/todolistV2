@@ -16,11 +16,11 @@ export default {
  {
    background-color: #007bff;
    text-align: center;
-   padding: 15px;
+   padding: 10px;
+   padding-top: 30px;
    width: 100%;
-   position: absolute;
    bottom: 0;
-   height: 57px;
+   min-height: 57px;
  }
 
 </style>

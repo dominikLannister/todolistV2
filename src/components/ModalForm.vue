@@ -4,13 +4,13 @@
           <form class="form-inline">
             <div class="form-group mb-2">
               <label for="staticEmail2" class="sr-only">Task</label>
-              <input type="text"  class="form-control" id="staticEmail2" placeholder="Task">
+              <input type="text"  class="form-control" id="staticEmail2" placeholder="Task" v-model="name">
             </div>
             <div class="form-group mx-sm-3 mb-2">
               <label for="inputPassword2" class="sr-only">Description</label>
-              <input type="password" class="form-control" id="inputPassword2" placeholder="Description">
+              <input type="text" class="form-control" id="inputPassword2" placeholder="Description" v-model="nameDescription" >
             </div>
-            <button type="submit" class="btn btn-primary mb-2">Add Task</button>
+            <button type="button" class="btn btn-primary mb-2" v-on:click="createTask">Add Task</button>
           </form>
         </div>
         <span class="close">&times;</span>
@@ -18,12 +18,44 @@
 </template>
 
 <script>
+import axios from 'axios';
+const API = 'http://localhost:81/apiTodolist/create.php';
+
 
 
 export default {
   name: 'ModalForm',
-}
 
+  data() {
+    return {
+        name: '',
+        nameDescription: '',
+    };
+  },
+
+
+
+  methods: {
+
+    createTask() {
+      axios({
+        method: 'post',
+        url: `${API}`,
+        data: {
+          actName: this.name,
+          description: this.nameDescription
+        }
+      })
+      .then(function(response) {
+        console.log(response);
+      })
+      .catch(function(error) {
+        console.log(error);
+      });
+    }
+  }
+
+}
 </script>
 
 <style scoped lang="scss">

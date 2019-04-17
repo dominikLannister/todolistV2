@@ -1,12 +1,12 @@
 <template lang="html">
- <main class="col-9">
+ <main class="col-12">
    <table class="table table-sm table-dark">
     <thead>
       <tr class="header">
         <th scope="col">#</th>
-        <th scope="col">First</th>
-        <th scope="col">Last</th>
-        <th scope="col">Handle</th>
+        <th scope="col">Name</th>
+        <th scope="col">Description</th>
+        <th scope="col">Options</th>
       </tr>
     </thead>
     <tbody>
@@ -26,6 +26,7 @@
         <th scope="row">3</th>
         <td colspan="2">Larry the Bird</td>
         <td>@twitter</td>
+
       </tr>
     </tbody>
   </table>
