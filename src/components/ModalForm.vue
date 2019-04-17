@@ -2,15 +2,15 @@
       <div class="modalForm">
         <div class="modalContainer">
           <form class="form-inline">
-            <div class="form-group mb-2">
+            <div class="form-group">
               <label for="staticEmail2" class="sr-only">Task</label>
               <input type="text"  class="form-control" id="staticEmail2" placeholder="Task" v-model="name">
             </div>
-            <div class="form-group mx-sm-3 mb-2">
+            <div class="form-group ">
               <label for="inputPassword2" class="sr-only">Description</label>
               <input type="text" class="form-control" id="inputPassword2" placeholder="Description" v-model="nameDescription" >
             </div>
-            <button type="button" class="btn btn-primary mb-2" v-on:click="createTask">Add Task</button>
+            <button type="button" class="btn btn-primary " v-on:click="createTask">Add Task</button>
           </form>
         </div>
         <span class="close">&times;</span>
@@ -21,40 +21,33 @@
 import axios from 'axios';
 const API = 'http://localhost:81/apiTodolist/create.php';
 
-
-
 export default {
   name: 'ModalForm',
-
   data() {
     return {
-        name: '',
-        nameDescription: '',
+      name: '',
+      nameDescription: '',
     };
   },
 
-
-
   methods: {
-
     createTask() {
       axios({
-        method: 'post',
-        url: `${API}`,
-        data: {
-          actName: this.name,
-          description: this.nameDescription
-        }
-      })
-      .then(function(response) {
-        console.log(response);
-      })
-      .catch(function(error) {
-        console.log(error);
-      });
+          method: 'post',
+          url: `${API}`,
+          data: {
+            actName: this.name,
+            description: this.nameDescription
+          }
+        })
+        .then(function(response) {
+          console.log(response);
+        })
+        .catch(function(error) {
+          console.log(error);
+        });
     }
   }
-
 }
 </script>
 
@@ -71,10 +64,12 @@ export default {
     background-color: rgba(0,0,0,0.9);
 }
 .modalContainer {
+    height: 70%;
     padding: 50px;
-    display: block;
+    display: flex;
+    align-items: center;
     margin: 100px auto auto;
-    width: 70%;
+    width: 80%;
     -webkit-animation-name: zoom;
     -webkit-animation-duration: 0.6s;
     animation-name: zoom;
@@ -83,9 +78,17 @@ export default {
     border-radius: 1px;
 }
 form {
-    width: 80%;
+    width: 100%;
     margin: auto;
-    padding: auto;
+
+    input {
+        height: 50px;
+    }
+    button {
+        width: 100%;
+        margin-top: 10px;
+        height: 50px;
+    }
 }
 @-webkit-keyframes zoom {
     from {

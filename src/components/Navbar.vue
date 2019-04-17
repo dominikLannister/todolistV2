@@ -1,4 +1,4 @@
-<template lang="html">
+ <template lang="html">
   <nav class="navbar navbar-dark bg-jumpers navbar-expand-xl bg-primary">
     <a class="navbar-brand " href="#">ToDoList.pl</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainmenu" aria-controls="mainmenu" aria-expanded="false"    aria-label="Przełącznik nawigacji">
