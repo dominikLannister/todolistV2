@@ -4,7 +4,7 @@
   <div class="main">
     <div class="row">
     </div>
-    <ModalForm v-if="visible === true" />
+    <ModalForm v-if="visible === true" @closeModal="visible = false" :rowId="result"/>
 
   </div>
   <table class="table table-sm table-dark">
@@ -86,7 +86,6 @@ export default {
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
 .home {
     font-family: 'Lato', sans-serif;
-
 
     .butttonContainer {
       display: flex;

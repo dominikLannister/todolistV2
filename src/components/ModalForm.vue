@@ -13,7 +13,7 @@
             <button type="button" class="btn btn-primary " v-on:click="createTask">Add Task</button>
           </form>
         </div>
-        <span class="close">&times;</span>
+        <span class="close" @click="$emit('closeModal')">&times;</span>
       </div>
 </template>
 
@@ -23,10 +23,17 @@ const API = 'http://localhost:81/apiTodolist/create.php';
 
 export default {
   name: 'ModalForm',
+  props: {
+    rowId: {
+      type: Object,
+      required: true,
+    }
+  },
   data() {
     return {
       name: '',
       nameDescription: '',
+      id: this.rowId.id,
     };
   },
 
@@ -36,6 +43,7 @@ export default {
           method: 'post',
           url: `${API}`,
           data: {
+            id: this.id,
             actName: this.name,
             description: this.nameDescription
           }
@@ -46,9 +54,21 @@ export default {
         .catch(function(error) {
           console.log(error);
         });
+    },
+    updateTask() {
+      axios({
+        method: 'post',
+        url: `${API}`,
+        data: {
+
+          actName: this.name,
+          description: this.nameDescription
+        }
+      });
+      }
     }
   }
-}
+
 </script>
 
 <style scoped lang="scss">
